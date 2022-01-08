@@ -29,6 +29,7 @@ const UserCard = () => {
       per_page: 10,
     };
     dispatch(getAllUsers(query));
+    window.scrollTo(0,0)
   };
 
   return (
