@@ -1,38 +1,110 @@
+:root {
+  --blue: #0079ff;
+  --darkBlue: #0063bf;
+  --white: #ffffff;
+  --lightGrey: #f0f2f3;
+  --lightMidGrey: #637288;
+  --green: #80e380;
+}
+
 .App {
+  background-color: var(--white);
+  min-height: 100vh;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.card {
+  overflow: hidden !important;
+  min-height: 60px;
+  border-radius: 6px;
+  border: 1px solid var(--lightGrey);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 32px;
+  box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
+  background: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.9s;
+}
+a {
+  text-decoration: none;
+}
+.card:hover {
+  transition: 0.9s;
+
+  box-shadow: 10px 20px 20px rgb(0 0 0 / 2%);
+}
+
+.card-active {
+  border: 1px solid var(--darkBlue);
+}
+
+.user-card-parent {
+  padding: 20px;
+  min-height: 60vh;
+  max-width: 500px;
+  background-color: var(--white);
+  border-radius: 5px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content_avatar {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  transition: linear 0.25s;
+  height: 128px;
+  width: 128px;
+  overflow: hidden;
+}
+.card-content_text {
+  flex-basis: 60%;
+}
+
+.dp-rel {
+  position: relative;
+}
+
+.progress-div {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pagination-div {
+  position: sticky;
+  bottom: 0px;
+  padding: 10px;
+  background: var(--white);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.user-details {
+  height: 0px;
+  transition: height 0.5s ease;
+  overflow: hidden;
+}
+.user-active {
+  height: 187px;
+  /* overflow-y: scroll; */
+}
+
+@media (max-width: 580px) {
+  .card-content {
+    flex-direction: column;
+    align-items: center;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .card-content div {
+    flex-basis: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .card-content_text {
+    text-align: center;
   }
 }

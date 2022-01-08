@@ -1,0 +1,10 @@
+export const SAVE_ALL_USERS = "SAVE_ALL_USERS";
+export const SAVE_USER = "SAVE_USER";
+export const START_LOADER = "START_LOADER";
+export const STOP_LOADER = "STOP_LOADER";
+export const SAVE_SEARCH = "SAVE_SEARCH";
+export const SAVE_SEARCH_COUNT = "SAVE_SEARCH_COUNT";
+export const START_DETAIL_LOADER = "START_DETAIL_LOADER";
+export const STOP_DETAIL_LOADER = "STOP_DETAIL_LOADER";
+
+
