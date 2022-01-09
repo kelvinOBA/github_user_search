@@ -3,12 +3,14 @@
   --darkBlue: #0063bf;
   --white: #ffffff;
   --lightGrey: #f0f2f3;
-  --lightMidGrey: #637288;
+  --lightMidGrey: #F6F7F9;
+
+
   --green: #80e380;
 }
 
 .App {
-  background-color: var(--white);
+  background-color: var(--lightMidGrey);
   min-height: 100vh;
   padding-top: 50px;
   justify-content: center;
