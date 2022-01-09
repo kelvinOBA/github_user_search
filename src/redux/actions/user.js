@@ -7,6 +7,7 @@ import {
   SAVE_SEARCH_COUNT,
   START_DETAIL_LOADER,
   STOP_DETAIL_LOADER,
+  EMPTY_USER_OBJECT
 
 } from "../types/userTypes";
 
@@ -40,6 +41,7 @@ export const getAllUsers = (queries) => (dispatch) => {
 };
 export const getUserDetail = (url) => (dispatch) => {
   dispatch({ type: START_DETAIL_LOADER });
+  dispatch({ type: EMPTY_USER_OBJECT, payload:{}  });
 
   http
     .get(url)

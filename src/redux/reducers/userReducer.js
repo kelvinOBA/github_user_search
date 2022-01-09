@@ -6,7 +6,8 @@ import {
     SAVE_SEARCH,
     SAVE_SEARCH_COUNT,
     START_DETAIL_LOADER,
-    STOP_DETAIL_LOADER
+    STOP_DETAIL_LOADER,
+    EMPTY_USER_OBJECT
 
 
   } from "../types/userTypes";
@@ -28,6 +29,8 @@ import {
       case SAVE_ALL_USERS:
         return { ...state, allUsers: action.payload };
         case SAVE_USER:
+            return { ...state, user: action.payload };
+        case EMPTY_USER_OBJECT:
             return { ...state, user: action.payload };
         case SAVE_SEARCH:
             return { ...state, searchValue: action.payload };

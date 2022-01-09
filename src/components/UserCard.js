@@ -17,6 +17,13 @@ const UserCard = () => {
   const totalSearchCount = useSelector(
     (state) => state.userReducer.totalSearchCount
   );
+
+
+useEffect(()=>{
+    setMyPage(1)
+
+},[searchValue])
+
   const getUserDetails = (url, id) => {
     dispatch(getUserDetail(url));
     setUserId(id);
